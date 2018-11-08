@@ -1,0 +1,16 @@
+string date = DateTime.Today.ToString();
+        var dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day); // time is zero by default
+        var tm = TimeSpan.Parse("12:00:00");
+        var fullDt = dt + tm;
+
+        if (DateTime.Now.ToLocalTime() >= fullDt )
+        {
+            if (DateTime.Now.DayOfWeek.ToString() == "Saturday")
+            {
+                date = DateTime.Now.AddDays(2).ToString("dd.MM.yy");  //Adding 2 days to the current date
+            }
+            else
+            {
+                date = DateTime.Now.AddDays(1).ToString("dd.MM.yy");  //Adding 1 day to the current day
+            }
+        }
