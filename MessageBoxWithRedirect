@@ -1,0 +1,3 @@
+ScriptManager.RegisterStartupScript(this, this.GetType(),
+"alert",
+"alert('Sorry! you do not have enough privilages to perform this action.');window.location ='OutboundHome.aspx';",true);
